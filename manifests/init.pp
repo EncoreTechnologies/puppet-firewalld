@@ -89,6 +89,8 @@ class firewalld (
       enable => $service_enable,
     }
 
+    notice("\n\n\nTEST!!!\n\n")
+
     # The following command won't work if the service is stopped
     if $service_ensure != 'stopped' {
       notify { 'Service Running :)': withpath => true }
